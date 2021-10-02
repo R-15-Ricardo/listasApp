@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="listas.AddTask">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#ffe8e8">
+            <Frame BackgroundColor="#ff4d4d" Padding="15, 0, 15, 20" CornerRadius="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nueva tarea" HorizontalTextAlignment="Start" TextColor="White" FontSize="25" Grid.Row="0" Grid.Column="0"/>
+                </Grid>
+            </Frame>
+            <Grid VerticalOptions="StartAndExpand" Padding="15, 0, 15, 20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="6*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="taskTitle" Placeholder="Tarea" HorizontalTextAlignment="Start" PlaceholderColor="Gray" FontSize="35" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
+                <BoxView BackgroundColor="Gray"  Grid.Row="1" Grid.Column="0"></BoxView>
+                <BoxView BackgroundColor="White" Margin="1,1,1,1" Grid.Row="1" Grid.Column="0"></BoxView>
+                <Editor x:Name="taskDescription"  Placeholder="Descripción" PlaceholderColor="Gray" FontSize="15" Grid.Row="1" Grid.Column="0"/>
+                <DatePicker x:Name="taskDate" Grid.Row="2" Grid.Column="0"></DatePicker>
+                <Button Text="Agregar tarea" BackgroundColor="#ff4d4d" TextColor="White" Grid.Row="3" Grid.Column="0" Clicked="saveTaskbtn_Clicked"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

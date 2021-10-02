@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="listas.MainPage">
+
+    <StackLayout x:Name="mainLay" BackgroundColor="#ffe8e8">
+        <Frame x:Name="mainFrame"  BackgroundColor="#ff4d4d" Padding="15, 0, 15, 10" CornerRadius="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Tareas:" HorizontalTextAlignment="Start" TextColor="White" FontSize="25" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="addBtn" Text="+" BackgroundColor="#ffe8e8" CornerRadius="25"  Grid.Row="0" Grid.Column="1" Clicked="addBtn_Clicked"></Button>
+            </Grid>
+        </Frame>
+        <ScrollView>
+            <StackLayout x:Name="taskContainer" Padding="20">
+            </StackLayout>
+        </ScrollView>
+        <Button x:Name="Flusher" Text="Limpiar tareas" HorizontalOptions="CenterAndExpand" BackgroundColor="#ff4d4d" TextColor="White" Margin="0,0,0,20" Clicked="Flusher_Clicked"></Button>
+
+    </StackLayout>
+
+</ContentPage>
